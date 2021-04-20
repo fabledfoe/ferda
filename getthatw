@@ -9,14 +9,14 @@ trap 'ret=$?; test $ret -ne 0 && printf "\n   \e[31m\033[0m  Formation failed
 set -e
 
 ###############################################################################
-# TWIRL: Check for required functions file
+# TILLY: Check for required functions file
 ###############################################################################
 
-if [ -e twirl ]; then
+if [ -e tilly ]; then
 	cd "$(dirname "${BASH_SOURCE[0]}")" \
-		&& . "twirl"
+		&& . "tilly"
 else
-	printf "\n ⚠️  ./twirl not found  💃🏾 First, you need to twirl on your haters\n"
+	printf "\n ⚠️  ./tilly not found  You looking for a tilly, buddy?\n"
 	exit 1
 fi
 
@@ -30,16 +30,16 @@ check_bash_version
 # Get in Formation!          http://patorjk.com/software/taag/ ( font: Script )
 ###############################################################################
 
-printf "
-   _
-  | |
-  | |  __   ,_    _  _  _    __, _|_ 🍋  __   _  _
-  |/  /  \_/  |  / |/ |/ |  /  |  |  |  /  \_/ |/ |
-  |__/\__/    |_/  |  |  |_/\_/|_/|_/|_/\__/   |  |
-  |\  ---------------------------------------------
-  |/  Cause you slay           [for Bash 3.2 - 3.9]
+printf "  
+  _____            _         ____                 _ 
+ |  ___|__ _ __ __| | __ _  |  _ \  _____   _____| |
+ | |_ / _ \ '__/ _` |/ _` | | | | |/ _ \ \ / / __| |
+ |  _|  __/ | | (_| | (_| | | |_| |  __/\ V /\__ \_|
+ |_|  \___|_|  \__,_|\__,_| |____/ \___| \_/ |___(_)
+                                                    
+	| Straight rippin' wares    [for Bash 3.2 - 3.9]
 ╭───────────────────────────────────────────────────╮
-│  Okay developers now let's get in ${bold}formation${normal}.      │
+│  ${bold}It's tilly time!${normal}                 │
 │───────────────────────────────────────────────────│
 │  Safe to run multiple times on the same machine.  │
 │  It ${green}installs${reset}, ${blue}upgrades${reset}, or ${yellow}skips${reset} packages based   │
@@ -211,18 +211,18 @@ fi
 ###############################################################################
 # OPTIONAL: Customizations
 ###############################################################################
-chapter "Adding hot sauce…"
-if [ -f "$HOME/.hot-sauce" ]; then
-	if ask "Do you want to add hot sauce?" Y; then
-		. "$HOME/.hot-sauce"; printf "\n  You got hot sauce in your bag. 🔥 ${bold}Swag.${normal}\n";
+chapter "Adding sandos…"
+if [ -f "$HOME/.sandos" ]; then
+	if ask "Do you want to add sandos?" Y; then
+		. "$HOME/.sandos"; printf "\n  Crushin' sandos...\n";
 	else
-		print_success_muted "Hot sauce declined. Skipped.";
+		print_success_muted "No sandos, bro. Skipped.";
 	fi
 else
-	print_warning "No ~/.hot-sauce found. Skipping."
+	print_warning "No ~/.sandos found. Skipping."
 fi
 
 ###############################################################################
-# 🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋🍋
+# 
 ###############################################################################
-e_lemon_ated
+get_that_w

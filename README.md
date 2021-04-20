@@ -1,7 +1,7 @@
-# 🐝 Formation <a href="https://www.patreon.com/minamarkham"><img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="100"></a>
+# Ferda Devs
 
-![Let's get in formation](assets/formation.gif)
-> Formation is a shell script to set up a macOS laptop for design and development.
+![Ferda devs](assets/ferda.gif)
+> Ferda is a shell script to set up a macOS laptop for design and development.
 
 It can be run multiple times on the same machine safely. It installs, upgrades, or skips packages based on what is already installed on the machine.
 
@@ -10,20 +10,20 @@ It can be run multiple times on the same machine safely. It installs, upgrades, 
 Download the script:
 
 ```sh
-git clone git@github.com/minamarkham/formation.git && cd formation
+git clone git@github.com/fabledfoe/ferda.git && cd ferda
 ```
 
 Review the script (please don't run scripts you don't understand):
 
 ```sh
-less slay
+less getthatw
 ```
 
-Slay:
+Let's get that W, boys!
 
 ```sh
 cd formation
-./slay 2>&1 | tee ~/slay.log
+./getthatw 2>&1 | tee ~/getthatw.log
 ```
 Just follow the prompts and you’ll be fine. 👌
 
@@ -31,7 +31,7 @@ Once the script is done, quit and relaunch Terminal.
 
 It is highly recommended to run the script regularly to keep your computer up to date.
 
-Your last Formation run will be saved to `~/slay.log`. To review it, run `less ~/slay.log`.
+Your last Formation run will be saved to `~/getthatw.log`. To review it, run `less ~/getthatw.log`.
 
 That's it! :sparkles:
 
@@ -124,11 +124,11 @@ The setup process will install:
 
 It should take less than 20 minutes to install (depends on your machine).
 
-## 🌶 Just add `~/.hot-sauce`
+## 🌶 Just add `~/.sandos`
 
-![I got hot sauce in my bag](assets/hot-sauce.gif)
+![Crushin sandos](assets/ferda.gif)
 
-Your `~/.hot-sauce` is added at the end of the Formation script. Put your customizations there.
+Your `~/.sandos` is added at the end of the Formation script. Put your customizations there.
 For example:
 
 ```sh
@@ -173,9 +173,9 @@ done
 ```
 
 Write your customizations such that they can be run safely more than once.
-See the `slay` script for examples.
+See the `getthatw` script for examples.
 
-Formation functions such as `step` and `link` can be used in your `~/.hot-sauce`.
+Formation functions such as `step` and `link` can be used in your `~/.sandos`.
 
 ## Known Issues
 Cask does not recognize applications installed outside of Homebrew Cask – in the case that the script fails, you can either remove the application from the install list or uninstall the application causing the failure and try again.

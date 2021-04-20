@@ -637,15 +637,14 @@ label_green() {
     printf "\e[30;42m $1 \e[0m\e[32m $2 \033[0m\n"
 }
 
-e_lemon_ated() {
+get_that_w() {
     printf "
-  ${bold}Congrats! You're in formation!${normal} 🍋
+  ${bold}Congrats! Now chill out, have a chomp.${normal}
 
   ╭────────────────────────────────────────────────────╮
-  │ Thanks for using Formation!                        │
-  │ If you liked it, then you should put a star on it! │
+  │ Thanks for using Ferda Devs                        │
   │                                                    │
-  │ https://github.com/minamarkham/formation           │
+  │ https://github.com/fabledfoe/ferda                 │
   ╰────────────────────────────────────────────────────╯
 
 "
