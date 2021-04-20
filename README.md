@@ -63,14 +63,14 @@ The setup process will install:
 <summary>CLI Tools & Utilities:</summary>
 
 * [asciinema](https://asciinema.org/) for recording terminal sessions
-* [Gulp](https://gulpjs.com/) the streaming build system
+* [Gulp](https://gulpjs.com/) the streaming build system (removed)
 * [Hotel](https://github.com/typicode/hotel), a simple process manager for developers
 * [Hub](http://hub.github.com/) for interacting with the GitHub API
 * [hugo](https://gohugo.io/), an open-source static site generator
 * [ImageMagick](http://www.imagemagick.org/) to create, edit, compose, or convert bitmap images
 * [mas](https://github.com/mas-cli/mas) Mac App Store command line interface
-* [Tig](https://github.com/jonas/tig) text-mode interface for git
-* [Vagrant](https://www.vagrantup.com/) for development environments
+* [Tig](https://github.com/jonas/tig) text-mode interface for git (removed)
+* [Vagrant](https://www.vagrantup.com/) for development environments (removed)
 </details>
 
 ### Apps
@@ -78,21 +78,21 @@ The setup process will install:
 <details>
 <summary>Productivity</summary>
 
-* [Airmail](http://airmailapp.com/) for a better mail client.
+* [Airmail](http://airmailapp.com/) for a better mail client. (remove)
 * [Alfred](https://www.alfredapp.com/) for increased productivity and efficiency with macOS.
-* [Fantastical](https://flexibits.com/fantastical) for a better calendar.
-* [Things](https://culturedcode.com/things/) for getting things done.
+* [Fantastical](https://flexibits.com/fantastical) for a better calendar. (removed)
+* [Things](https://culturedcode.com/things/) for getting things done. (removed)
 </details>
 
 <details>
 <summary>Development</summary>
 
 * [Dash](https://kapeli.com/dash) offline access to API documentation sets
-* [ForkLift](https://www.binarynights.com/forklift/) FTP client
+* [ForkLift](https://www.binarynights.com/forklift/) FTP client (removed)
 * [Hyper](https://hyper.is/) for an alternative terminal.
 * [ImageOptim](https://imageoptim.com/mac) for image optimization.
 * [iTerm](https://www.iterm2.com/) for a better terminal.
-* [Kaleidoscope](https://www.kaleidoscopeapp.com/) for a better diff tool.
+* [Kaleidoscope](https://www.kaleidoscopeapp.com/) for a better diff tool. (removed)
 * [Virtual Box](https://www.virtualbox.org/) powerful virtualization tool
 * [Visual Studio Code](https://code.visualstudio.com/) IDE
 </details>
@@ -100,32 +100,32 @@ The setup process will install:
 <details>
 <summary>Design</summary>
 
-* [Affinity Designer](https://affinity.serif.com/en-us/designer/)
-* [Affinity Photo](https://affinity.serif.com/en-us/photo/)
-* [Sip](http://sipapp.io/) collect, organize & share your colors
-* [Sketch](https://www.sketchapp.com/) for design.
+* [Affinity Designer](https://affinity.serif.com/en-us/designer/) (removed)
+* [Affinity Photo](https://affinity.serif.com/en-us/photo/) (removed)
+* [Sip](http://sipapp.io/) collect, organize & share your colors (removed)
+* [Sketch](https://www.sketchapp.com/) for design. (removed)
 </details>
 
 <details>
 <summary>Communication</summary>
 
 * [Bear](http://www.bear-writer.com/) for writing and previewing markdown.
-* [Skype](https://www.skype.com/en/) for free calls to friends and family.
+* [Skype](https://www.skype.com/en/) for free calls to friends and family. (removed)
 * [Slack](https://slack.com/) where work happens.
-* [Ulysses](https://ulyssesapp.com/) for long-form writing.
+* [Ulysses](https://ulyssesapp.com/) for long-form writing. (removed)
 </details>
 
 <details>
 <summary>Utilities</summary>
 
 * [1Password](https://1password.com/) for password management.
-* [Dropbox](https://www.dropbox.com) for cloud file storage.
+* [Dropbox](https://www.dropbox.com) for cloud file storage. (removed)
 * [Divvy](http://mizage.com/divvy/) for better window management.
 * [Encrypto](https://macpaw.com/encrypto) for securing files.
-* [ExpressVPN](https://www.expressvpn.com/) for privacy.
-* [HyperDock](https://bahoom.com/hyperdock/)
+* [ExpressVPN](https://www.expressvpn.com/) for privacy. (removed)
+* [HyperDock](https://bahoom.com/hyperdock/) (removed)
 * [Karabiner](https://pqrs.org/osx/karabiner/) for keyboard mapping.
-* [Renamer](https://renamer.com/) for easy file renaming.
+* [Renamer](https://renamer.com/) for easy file renaming. (removed)
 </details>
 
 <details>
