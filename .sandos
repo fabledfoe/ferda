@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+printf "Setting up projects…\n"
+
+printf "\n Install Node 10 and set as default \n"
+source ~/.zshrc
+nvm install 10
+nvm use 10
+nvm alias default 10
+
+printf "Clone and install portal repos \n"
+cd ~/testfolder
+git clone git@github.com:RollKall/RollKall-Portal.git
+cd RollKall-Portal
+yarn
+cd ..
+git clone git@github.com:RollKall/RollKall-Client-Portal.git
+cd RollKall-Client-Portal
+yarn
+cd ..

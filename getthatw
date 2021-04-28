@@ -102,7 +102,8 @@ fi
 # -----------------------------------------------------------------------------
 # NVM
 # -----------------------------------------------------------------------------
-if [ -x nvm ]; then
+if ! [ -d ~/.nvm ]; then
+	touch ~/.zshrc
 	step "Installing NVM…"
 	curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 	print_success "NVM installed!"
@@ -112,6 +113,7 @@ if [ -x nvm ]; then
 	nvm run node --version
 	nodev=$(node -v)
 	print_success "Using Node $nodev!"
+	compaudit | xargs chmod g-w
 else
 	print_success_muted "NVM/Node already installed. Skipping."
 fi
@@ -121,8 +123,8 @@ fi
 # -----------------------------------------------------------------------------
 if ! [ -x "$(command -v brew)" ]; then
 	step "Installing Homebrew…"
-	curl -fsS 'https://raw.githubusercontent.com/Homebrew/install/master/install' | ruby
-	export PATH="/usr/local/bin:$PATH"
+	/bin/bash -c \
+      "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"	export PATH="/usr/local/bin:$PATH"
 	print_success "Homebrew installed!"
 else
 	print_success_muted "Homebrew already installed. Skipping."
@@ -169,30 +171,30 @@ if [ -e $cwd/swag/casks ]; then
 fi
 
 ###############################################################################
-# INSTALL: Mac App Store Apps
+# INSTALL: Mac App Store Apps (NOTE: WON'T INSTALL NEW APPS, USEFUL FOR PERSONAL RE-INSTALLS ONLY)
 ###############################################################################
-chapter "Installing apps from App Store…"
-if [ -x mas ]; then
+# chapter "Installing apps from App Store…"
+# if [ -x mas ]; then
 
-	print_warning "Please install mas-cli first: brew mas. Skipping."
+# 	print_warning "Please install mas-cli first: brew mas. Skipping."
 
-	else
+# 	else
 
-	if [ -e $cwd/swag/apps ]; then
-		if mas_setup; then
-			# Workaround for associative array in Bash 3
-			# https://stackoverflow.com/questions/6047648/bash-4-associative-arrays-error-declare-a-invalid-option
-			for app in $(<$cwd/swag/apps); do
-				KEY="${app%%::*}"
-				VALUE="${app##*::}"
-				install_application_via_app_store $KEY $VALUE
-			done
-		else
-			print_warning "Please signin to App Store first. Skipping."
-		fi
-	fi
+# 	if [ -e $cwd/swag/apps ]; then
+# 		if mas_setup; then
+# 			# Workaround for associative array in Bash 3
+# 			# https://stackoverflow.com/questions/6047648/bash-4-associative-arrays-error-declare-a-invalid-option
+# 			for app in $(<$cwd/swag/apps); do
+# 				KEY="${app%%::*}"
+# 				VALUE="${app##*::}"
+# 				install_application_via_app_store $KEY $VALUE
+# 			done
+# 		else
+# 			print_warning "Please signin to App Store first. Skipping."
+# 		fi
+# 	fi
 
-fi
+# fi
 
 ###############################################################################
 # CLEAN: Homebrew files
@@ -217,10 +219,10 @@ fi
 ###############################################################################
 # OPTIONAL: Customizations
 ###############################################################################
-chapter "Adding sandos…"
-if [ -f "$HOME/.sandos" ]; then
+chapter "Sandos"
+if [ -f ".sandos" ]; then
 	if ask "Do you want to add sandos?" Y; then
-		. "$HOME/.sandos"; printf "\n  Crushin' sandos...\n";
+		. "./.sandos"; printf "\n  Crushin' sandos...\n";
 	else
 		print_success_muted "No sandos, bro. Skipped.";
 	fi

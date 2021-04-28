@@ -1,16 +1,10 @@
-colortest::colortest
 cssstats-cli::cssstats
-@11ty/eleventy::eleventy
 eslint::eslint
 fast-cli::fast
-@frctl/fractal::fractal
-gatsby-cli::gatsby
 git-standup::git-standup
 hotel::hotel
 imageoptim-cli::imageOptim
-npmusic::npmusic
 pa11y::pa11y
-parrotsay::parrotsay
 terminalizer::terminalizer
 vsce::vsce
 vue-cli::vue
