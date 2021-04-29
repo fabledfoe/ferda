@@ -27,7 +27,13 @@ fi
 check_bash_version
 
 ###############################################################################
-# Get in Formation!          http://patorjk.com/software/taag/ ( font: Script )
+# CHECK: Architecture (ARM64 or Intel)
+###############################################################################
+
+check_architecture
+
+###############################################################################
+# Ferda Devs!          http://patorjk.com/software/taag/ ( font: Script )
 ###############################################################################
 
 printf "  
@@ -37,7 +43,7 @@ printf "
  |  _|  __/ | | (_| | (_| | | |_| |  __/\ V /\__ \_|
  |_|  \___|_|  \__,_|\__,_| |____/ \___| \_/ |___(_)
                                                     
-	| Straight rippin' wares    [for Bash 3.2 - 3.9]
+	| Straight rippin' dev wares    [for Bash 3.2 - 3.9]
 ╭───────────────────────────────────────────────────╮
 │  ${bold}It's tilly time!${normal}                 │
 │───────────────────────────────────────────────────│
@@ -121,10 +127,12 @@ fi
 # -----------------------------------------------------------------------------
 # Homebrew
 # -----------------------------------------------------------------------------
-if ! [ -x "$(command -v brew)" ]; then
+if ! command -v brew >/dev/null; then
 	step "Installing Homebrew…"
 	/bin/bash -c \
       "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"	export PATH="/usr/local/bin:$PATH"
+	echo 'eval $(/opt/homebrew/bin/brew shellenv)' >> ~/.zshrc
+	eval $(/opt/homebrew/bin/brew shellenv)
 	print_success "Homebrew installed!"
 else
 	print_success_muted "Homebrew already installed. Skipping."
@@ -222,7 +230,7 @@ fi
 chapter "Sandos"
 if [ -f ".sandos" ]; then
 	if ask "Do you want to add sandos?" Y; then
-		. "./.sandos"; printf "\n  Crushin' sandos...\n";
+		. "./.sandos";
 	else
 		print_success_muted "No sandos, bro. Skipped.";
 	fi

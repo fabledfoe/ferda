@@ -5,7 +5,6 @@ git-standup::git-standup
 hotel::hotel
 imageoptim-cli::imageOptim
 pa11y::pa11y
-terminalizer::terminalizer
 vsce::vsce
 vue-cli::vue
 yo::yo

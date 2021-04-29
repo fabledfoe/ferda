@@ -325,6 +325,18 @@ get_os_version() {
 
 }
 
+check_architecture() {
+    arch_name="$(uname -m)"
+ 
+    if [ "${arch_name}" = "arm64" ]; then
+        print_in_blue "Looks like you're on a new Mac w/ARM64. Sweet!\n";
+        print_in_red "SOME APPS MAY NOT INSTALL. RUN THIS TERMINAL WITH ROSETTA.\n";
+        exit 0
+    else
+        echo "Unknown architecture: ${arch_name}"
+    fi
+}
+
 check_internet_connection() {
     if [ ping -q -w1 -c1 google.com &>/dev/null ]; then
         print_error "Please check your internet connection";
