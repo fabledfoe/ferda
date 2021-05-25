@@ -4,9 +4,9 @@ printf "Setting up projects…\n"
 
 printf "\n Install Node 10 and set as default \n"
 source ~/.zshrc
-nvm install 10
-nvm use 10
-nvm alias default 10
+nvm install 14
+nvm use 14
+nvm alias default 14
 
 printf "Clone and install portal repos \n"
 cd ~
