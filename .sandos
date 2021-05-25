@@ -2,7 +2,7 @@
 
 printf "Setting up projects…\n"
 
-printf "\n Install Node 10 and set as default \n"
+printf "\n Install Node 14 and set as default \n"
 source ~/.zshrc
 nvm install 14
 nvm use 14
